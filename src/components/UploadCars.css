@@ -1,0 +1,285 @@
+/* From Uiverse.io by csemszepp */ 
+#TopMid {
+    position: absolute;
+    top: 100px;
+    left: 800px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+.custum-file-upload {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #e8e8e8;
+    background-color: #212121;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px #e8e8e8;
+    margin-left:780px;
+    margin-top:360px;
+    transition: all 0.3s ease;
+    z-index: 0;
+  }
+  
+  .custum-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .icon svg {
+    height: 80px;
+    fill: #e8e8e8;
+  }
+  
+  .custum-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .text span {
+    font-weight: 400;
+    color: #e8e8e8;
+  }
+  
+  .custum-file-upload input {
+    display: none;
+  }
+
+/* 添加选中文件后的样式 */
+.selected-file {
+  color: #4CAF50;  /* 绿色 */
+  font-weight: bold;
+  word-break: break-all;
+  max-width: 280px;  /* 限制文件名显示宽度 */
+  text-align: center;
+}
+
+/* 上传按钮样式 */
+.upload-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.upload-button:hover {
+  background-color: #45a049;
+}
+
+/* 消息提示样式 */
+.message {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 修改现有的文件上传框样式 */
+.custum-file-upload {
+  transition: all 0.3s ease;
+}
+
+.custum-file-upload:hover {
+  border-color: #4CAF50;
+  transform: translateY(-2px);
+}
+
+/* 当有文件被选中时的样式 */
+.custum-file-upload.has-file {
+  border-color: #4CAF50;
+  background-color: #2c2c2c;
+}
+
+/* 修改 collection-selector 的样式 */
+.collection-selector {
+  position: absolute;
+  top: 250px;
+  left: 800px;
+  width: 300px;
+}
+
+.collection-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 创建按钮样式 */
+.create-collection-button {
+  position: absolute;
+  top: 240px;
+  left: 1130px;
+  padding: 10px px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.create-collection-button:hover {
+  background-color: #45a049;
+}
+
+/* 模态框背景 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 模态框内容 */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  position: relative;
+}
+
+/* 关闭按钮 */
+.modal-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* 模态框标题 */
+.modal-header {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+/* 模态框内容区 */
+.modal-body {
+  margin-bottom: 20px;
+}
+
+.modal-body input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 模态框底部按钮区 */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-button-cancel {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.modal-button-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.modal-button-danger:disabled {
+  background-color: #dc354580;
+  cursor: not-allowed;
+}
+
+/* 删除按钮样式 */
+.delete-collection-button {
+  position: absolute;
+  top: 240px;
+  left: 1250px;  /* 调整位置到 Create New Collection 按钮右边 */
+  padding: 10px 20px;
+  background-color: #dc3545;  /* 红色 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s;
+  z-index: 1;
+}
+
+.delete-collection-button:hover {
+  background-color: #c82333;  /* 深红色 hover 效果 */
+}
+
+/* 添加通知样式 */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #48bb78;  /* 成功消息的绿色 */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  animation: fadeInOut 2s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.notification.error {
+  background-color: #dc3545;  /* 错误消息的红色 */
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  15% { opacity: 1; transform: translateY(0); }
+  85% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+

@@ -1,0 +1,186 @@
+/* Diagram specific styles */
+#diagramContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 80px 40px 40px 40px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  gap: 30px;
+}
+
+#diagramContainer h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 20px 0 30px 0;
+  text-align: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+#diagramContainer p {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+#diagramContainer #chartContainer {
+  width: 95%;
+  max-width: 1700px;
+  height: 700px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  background-color: white;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0;
+  transform: translateX(-50px);
+  padding-right: 50px;
+}
+
+#diagramContainer #chartContainer:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+#diagramContainer a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+#diagramContainer a:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+#diagramContainer #carMakeDetails {
+  background-color: white;
+  padding: 25px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+#diagramContainer #carMakeDetails h2 {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+#diagramContainer #carMakeDetails p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin: 10px 0;
+}
+
+#diagramContainer p.loading {
+  font-size: 1.2rem;
+  color: #95a5a6;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  #diagramContainer {
+    padding: 20px;
+  }
+
+  #diagramContainer h2 {
+    font-size: 1.8rem;
+  }
+
+  #diagramContainer #chartContainer {
+    padding: 20px;
+    height: 500px;
+  }
+
+  #diagramContainer #carMakeDetails {
+    padding: 20px;
+  }
+
+  #diagramContainer #carMakeDetails h2 {
+    font-size: 1.5rem;
+  }
+
+  #diagramContainer #carMakeDetails p {
+    font-size: 1.1rem;
+  }
+
+  #diagramContainer a {
+    padding: 10px 20px;
+  }
+}
+
+/* 调整图表容器内部的画布位置 */
+#diagramContainer #chartContainer canvas {
+  margin-left: 100px;
+  transform: translateX(-100px);
+}
+
+#diagramContainer #lineChartContainer {
+  width: 95%;
+  max-width: 1700px;
+  height: 400px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  background-color: white;
+  transition: all 0.3s ease;
+  margin: 30px 0;
+  margin-right:100px;
+}
+
+#diagramContainer #lineChartContainer:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  #diagramContainer #lineChartContainer {
+    padding: 20px;
+    height: 300px;
+  }
+}
+
+.make-selector {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.make-select {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  background-color: white;
+  color: #2c3e50;
+  cursor: pointer;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.make-select:hover {
+  border-color: #2980b9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.make-select:focus {
+  outline: none;
+  border-color: #2980b9;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
